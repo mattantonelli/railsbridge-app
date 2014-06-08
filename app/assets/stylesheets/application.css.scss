@@ -5,10 +5,27 @@ body {
   color: #ffffff;
 }
 
-input {
+input, textarea {
   color: #000000;
 }
 
 .navbar {
   padding-right: 10px;
+}
+
+#signup {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+#error_explanation {
+  color: #cc0000;
+}
+
+table {
+  margin-bottom: 20px;
 }

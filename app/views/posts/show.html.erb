@@ -1,0 +1,14 @@
+<div class="container">
+  <p>
+  <strong><%= @post.title %></strong>
+  </p>
+
+  <p>
+  posted by <strong><%= @post.author %></strong><br />
+  on <%= @post.created_at_long %>
+  </p>
+
+  <p>
+  <%= @post.content %>
+  </p>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Create a new post</h1>
+
+  <%= form_for :post, url: posts_path do |p| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <p><%= pluralize(@post.errors.count, "error") %> prohibited this article from being saved:</p>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <p>
+    <%= p.label :title %><br />
+    <%= p.text_field :title %>
+    </p>
+
+    <p>
+    <%= p.label :content %><br />
+    <%= p.text_area :content %>
+    </p>
+
+    <p>
+    <%= p.submit %>
+    </p>
+  <% end %>
+
+  <%= link_to 'Back', posts_path %>
+</div>
